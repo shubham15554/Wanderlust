@@ -1,0 +1,56 @@
+
+
+<%- layout("layout/boilerplate") %>
+<div class="container mt-4">
+  
+  <div class="row mt-3">
+    <div class="col-8 offset-2">
+      <br>
+      <br>
+      <h2 class="mb-4">Create a New Listing</h2>
+      <form method="POST" action="/listings"  class="needs-validation" novalidate enctype="multipart/form-data" >
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" name="listing[title]" id="title" placeholder="Enter title" required class="form-control">
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea name="listing[description]" id="description" placeholder="Enter description" class="form-control" required></textarea>
+      <div class="invalid-feedback">Please enter a short description </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="image" class="form-label">Upload Image</label>
+      <input type="file" name="listing[image]" id="image" placeholder="Upload image" class="form-control">
+    </div>
+
+    <div class="row">
+      <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" name="listing[price]" id="price" placeholder="Enter price" class="form-control" required >
+        <div class="invalid-feedback">Price should be valid</div>
+      </div>
+
+      <div class="mb-3 col-md-8">
+        <label for="country" class="form-label">Country</label>
+        <input type="text" name="listing[country]" id="country" placeholder="Enter country" class="form-control" required>
+        <div class="invalid-feedback">Country should be valid</div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="location" class="form-label">Location</label>
+      <input type="text" name="listing[location]" id="location" placeholder="Enter location" class="form-control"required>
+       <div class="invalid-feedback">Location should be valid</div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary add-btn">Add</button>
+     <br>
+    <br>
+  </form>
+    </div>
+  </div>
+</div>
+
