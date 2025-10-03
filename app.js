@@ -90,10 +90,10 @@ app.use("/listings/:id/reviews" , reviewsRouter);
 app.use("/" , usersRouter);
 
   
+app.get('/', (req, res) => {
+    res.redirect('/listings');  // or render your home page
+});
 
-// app.all("*" , (req , res , next )=> {
-//     next( new ExpressError(404  , "Page is not found"));
-// });
 
 app.use((req, res, next) => {
     next(new ExpressError(404, "Page is not found"));
