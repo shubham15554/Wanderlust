@@ -124,7 +124,9 @@ body{
     padding-left: 0;
     padding-right: 0;
 }
-
+.review-card{
+    padding: 1rem;
+}
 
  /* index route */
 
@@ -164,8 +166,42 @@ align-items: center;
 }
 
 @media(max-width: 844px){
-    .newListing , .fielter , .tax-toggle , .explore {
+    .newListing , .fielter , .tax-toggle {
         display: none  !important;
     }
 }
 
+#map {
+  width: 100%;
+  height: 500px;
+}
+
+@media (max-width: 768px) {
+  #map {
+    height: 300px; /* smaller on tablets/mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  #map {
+    height: 250px; /* smaller on phones */
+  }
+}
+
+@media(max-width: 800px){
+    .dual-btns{
+        display: flex !important;
+        
+    }
+
+    .del-btn{
+        margin-left: 1rem !important;
+        margin-top: 1rem !important
+    }
+    .edit-btn{
+        width: 5rem !important;
+         margin-left: 1rem !important;
+        margin-top: 1rem !important
+    }
+
+}
