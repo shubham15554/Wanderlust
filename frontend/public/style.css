@@ -1,0 +1,41 @@
+.airbnb-ai-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #FF385C 0%, #E61E4D 50%, #BD1E51 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(230, 30, 77, 0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    outline: none;
+}
+
+/* होवर करने पर (Hover Effect) */
+.airbnb-ai-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 30, 77, 0.4), 
+                0 0 12px rgba(255, 56, 92, 0.6);
+    background: linear-gradient(135deg, #FF4E6E 0%, #FF385C 100%);
+}
+
+/* बटन दबाने पर (Click/Active Effect) */
+.airbnb-ai-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(230, 30, 77, 0.2);
+}
+
+/* चमकते हुए सितारे का थोड़ा सा घूमना */
+.airbnb-ai-btn:hover .ai-icon {
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+}
