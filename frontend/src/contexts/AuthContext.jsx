@@ -73,7 +73,7 @@ export const AuthProvider = ({ children }) => {
         const code = authresult.code;
 
         const res = await axios.post(
-          "http://localhost:8000/auth/googleAuth",
+          "https://wanderlust-1-5v1d.onrender.com/auth/googleAuth",
           {
             code: code,
           },
