@@ -31,7 +31,7 @@ export default function Signin() {
 
   const handleGoogleClick = async ()=>{
     try{
-      let msg =   handleGoogleLogin();
+      let msg = handleGoogleLogin();
      
     }
     catch(err){
@@ -155,7 +155,7 @@ export default function Signin() {
           </div>
 
           <div className="space-y-2.5">
-            <button className="w-full py-2.5 border border-gray-300 hover:border-black rounded-xl font-semibold text-xs text-gray-700 flex items-center justify-center gap-2 transition cursor-pointer bg-white" onClick={handleGoogleLogin} >
+            <button className="w-full py-2.5 border border-gray-300 hover:border-black rounded-xl font-semibold text-xs text-gray-700 flex items-center justify-center gap-2 transition cursor-pointer bg-white" onClick={handleGoogleClick} >
               
               <svg className="w-4 h-4" viewBox="0 0 24 24">
                 <path fill="#4285F4" d="M23.7 12.3c0-.8-.1-1.7-.2-2.5H12v4.8h6.6c-.3 1.5-1.1 2.8-2.4 3.7v3.1h3.9c2.3-2.1 3.6-5.2 3.6-9.1z"/>
