@@ -14,8 +14,7 @@ import { upload } from './middleware/multer.js';
 import { generateDescription } from './service/aiIntegrate.js';
 
 import axios from 'axios';
-import User from './models/user.js';
-import { createSecretToken } from './utils/createToken.js';
+
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors({

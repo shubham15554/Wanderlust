@@ -96,11 +96,11 @@ export const googleLogin = async (req , res)=>{
       }
 
       let token = createSecretToken(user._id);
-      res.cookie("token", token, {
-        httpOnly: true,     // 🔐 सुरक्षा के लिए बेहद ज़रूरी (XSS अटैक से बचाता है, JS इसे रीड नहीं कर पाएगा)
-        secure: false,      // ❌ Localhost पर https नहीं होता, इसलिए इसे false रखें (प्रोडक्शन में true होगा)
-        sameSite: "lax",    // 🌐 Localhost के लिए 'lax' सबसे बेस्ट और स्टैंडर्ड है
-        maxAge: 7 * 24 * 60 * 60 * 1000, // ⏳ कुकी की लाइफ (जैसे यहाँ 7 दिन मिलीसेकंड में है)
+        res.cookie("token", token, {
+            httpOnly: true,         
+            secure: true,           
+            sameSite: "none",       
+            maxAge: 24 * 60 * 60 * 1000, 
         });
 
 
